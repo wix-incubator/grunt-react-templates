@@ -1,0 +1,22 @@
+{
+  "name": "grunt-react-templates",
+  "version": "0.0.1",
+  "description": "Grunt task for react-templates - Light weight templates for react -> write html get valid react code",
+  "main": "./tasks/react-templates.js",
+  "scripts": {
+    "test": "node test/src/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wix/grunt-react-templates.git"
+  },
+  "author": "Ido Keren",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wix/grunt-react-templates/issues"
+  },
+  "homepage": "https://github.com/wix/grunt-react-templates",
+  "dependencies": {
+      "react-templates": "git+ssh://git@github.com:wix/react-templates.git"
+  }
+}
