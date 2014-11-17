@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/wix/grunt-react-templates",
   "dependencies": {
-      "react-templates": "git+ssh://git@github.com:wix/react-templates.git"
+      "react-templates": "git+ssh://git@github.com:wix/react-templates.git#gh-pages"
   }
 }
