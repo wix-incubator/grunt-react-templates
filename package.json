@@ -18,6 +18,6 @@
   "homepage": "https://github.com/wix/grunt-react-templates",
   "dependencies": {
     "glob": "^4.1.1",
-    "react-templates": "git+ssh://git@github.com:wix/react-templates.git#gh-pages"
+    "react-templates": "^0.1.4"
   }
 }

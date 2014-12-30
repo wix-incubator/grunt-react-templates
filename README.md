@@ -9,7 +9,7 @@ If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out th
 
 ### Installation
 ```shell
-npm install git+ssh://git@github.com:wix/grunt-react-templates --save-dev
+npm install grunt-react-templates --save-dev
 ```
 ### Usage
 
