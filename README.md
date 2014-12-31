@@ -48,3 +48,12 @@ Glob pattern for files to be processed.
 
 ## License
 Copyright (c) 2014 Wix. Licensed under the MIT license.
+
+[npm-image]: https://img.shields.io/npm/v/grunt-react-templates.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/grunt-react-templates
+[travis-image]: https://img.shields.io/travis/wix/grunt-react-templates/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/wix/grunt-react-templates
+[coveralls-image]: https://img.shields.io/coveralls/wix/grunt-react-templates/master.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/wix/grunt-react-templates?branch=master
+[downloads-image]: http://img.shields.io/npm/dm/grunt-react-templates.svg?style=flat-square
+[downloads-url]: https://npmjs.org/package/grunt-react-templates
