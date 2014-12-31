@@ -1,3 +1,5 @@
+[![NPM version][npm-image]][npm-url]
+
 # grunt-react-templates
 
 > [react templates](https://github.com/wix/react-templates) grunt task
