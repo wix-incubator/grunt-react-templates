@@ -33,12 +33,12 @@ Task targets, files and options may be specified according to the grunt [Configu
 Type: `Object`
 Default: null
 
-Key-value object or required modules. By default generated the following code 
+Key-value object of required modules. By default generated the following code 
 
 ```js
 define([
-    'react/addons',
-    'lodash'
+		'react/addons',
+		'lodash'
 ], function (React, _) {
 	...
 	// Generated React.js code 
@@ -50,13 +50,13 @@ define([
 
 ```js
 reactTemplates: {
-  compile: {
-    files: {
-      'path/to/result.js': 'path/to/source.rt', // 1:1 compile
-      'path/to/another.js': ['path/to/sources/*.rt', 'path/to/more/*.rt'] // compile and concat into single file
-    }
-  },
-  glob_to_multiple: {
+	compile: {
+		files: {
+			'path/to/result.js': 'path/to/source.rt', // 1:1 compile
+			'path/to/another.js': ['path/to/sources/*.rt', 'path/to/more/*.rt'] // compile and concat into single file
+		}
+	},
+	glob_to_multiple: {
 		expand: true,
 		flatten: true,
 		cwd: 'path/to',
