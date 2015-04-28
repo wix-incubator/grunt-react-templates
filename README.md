@@ -5,16 +5,13 @@
 
 > [react templates](https://github.com/wix/react-templates) grunt task
 
-## Getting Started
-This plugin requires Grunt.
+This plugin requires Grunt `>=0.4.0`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
-### Installation
 ```shell
 npm install grunt-react-templates --save-dev
 ```
-### Usage
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
@@ -22,33 +19,57 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-react-templates');
 ```
 
-You can alias it to rt
+*This plugin was designed to work with Grunt 0.4.x. If you're still using grunt v0.3.x it's strongly recommended that [you upgrade](http://gruntjs.com/upgrading-from-0.3-to-0.4), but in case you can't please use [v0.3.2](https://github.com/gruntjs/grunt-contrib-coffee/tree/grunt-0.3-stable).*
 
-```js
-grunt.registerTask('rt', ['react-templates']);
-```
 
-### Configuration
-In your project's Gruntfile, add a section named `reactTemplates` to the data object passed into `grunt.initConfig()`. The options (and defaults) are:
+## React Templates task
+_Run this task with the `grunt reactTemplates` command._
 
-```js
-grunt.initConfig({
-  reactTemplates: {
-    src: ['**/*.rt']
-  }
-})
-```
+Task targets, files and options may be specified according to the grunt [Configuring tasks](http://gruntjs.com/configuring-tasks) guide.
 
 ### Options
 
-#### src
-Type: `Array`
-Default value: `['**/*.rt']`
+#### defines
+Type: `Object`
+Default: null
 
-Glob pattern for files to be processed.
+Key-value object or required modules. By default generated the following code 
+
+```js
+define([
+    'react/addons',
+    'lodash'
+], function (React, _) {
+	...
+	// Generated React.js code 
+	...
+});
+```
+
+### Usage Examples
+
+```js
+reactTemplates: {
+  compile: {
+    files: {
+      'path/to/result.js': 'path/to/source.rt', // 1:1 compile
+      'path/to/another.js': ['path/to/sources/*.rt', 'path/to/more/*.rt'] // compile and concat into single file
+    }
+  },
+  glob_to_multiple: {
+		expand: true,
+		flatten: true,
+		cwd: 'path/to',
+		src: ['*.rt'],
+		dest: 'path/to/dest/',
+		ext: '.js'
+	}
+```
+
+For more examples on how to use the `expand` API to manipulate the default dynamic path construction in the `glob_to_multiple` examples, see "[Building the files object dynamically](http://gruntjs.com/configuring-tasks#building-the-files-object-dynamically)" in the grunt wiki entry [Configuring Tasks](http://gruntjs.com/configuring-tasks).
 
 ## License
-Copyright (c) 2014 Wix. Licensed under the MIT license.
+Copyright (c) 2015 Wix. Licensed under the MIT license.
 
 [npm-image]: https://img.shields.io/npm/v/grunt-react-templates.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/grunt-react-templates
