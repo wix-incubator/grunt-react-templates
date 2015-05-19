@@ -14,9 +14,10 @@ module.exports = function register(grunt) {
 
             conf._ = files;
             var ret = reactTemplates.executeOptions(conf);
+            grunt.log.ok('processed ' + files.length + ' files');
             return ret === 0;
         } catch (e) {
-            grunt.log.writeln('Error: ' + e);
+            grunt.log.writeln('Error: ' + e + ' ' + e.stack());
         }
     });
 };
