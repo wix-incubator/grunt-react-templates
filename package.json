@@ -4,7 +4,10 @@
   "description": "Grunt task for react-templates - Light weight templates for react -> write html get valid react code",
   "main": "./tasks/react-templates.js",
   "scripts": {
-    "test": "echo 'ok - no tests'"
+    "test": "echo 'ok - no tests'",
+    "patch": "npm version patch -m\"update version to %s\" && git push && git push --tags",
+    "minor": "npm version minor -m\"update version to %s\" && git push && git push --tags",
+    "major": "npm version major -m\"update version to %s\" && git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -17,8 +20,8 @@
   },
   "homepage": "https://github.com/wix/grunt-react-templates",
   "dependencies": {
-    "glob": "^5.0.6",
-    "react-templates": "0.1.20"
+    "glob": "^5.0.14",
+    "react-templates": "0.1.22"
   },
   "keywords": [
     "templates",
@@ -27,6 +30,7 @@
     "reactjs",
     "react.js",
     "react-component",
-    "react component"
+    "react component",
+    "gruntplugin"
   ]
 }
