@@ -3,7 +3,7 @@
 
 # grunt-react-templates
 
-> [react templates](https://github.com/wix/react-templates) grunt task
+> [React Templates](https://github.com/wix/react-templates) grunt task
 
 ## Getting Started
 This plugin requires Grunt.
@@ -22,11 +22,14 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-react-templates');
 ```
 
-You can alias it to rt
-
-```js
-grunt.registerTask('rt', ['react-templates']);
+Once you define a target inside the task, e.g. `dist`, you can run
+```bash
+$ grunt reactTemplates:dist
 ```
+or:
+```bash
+$ grunt react-templates:dist
+ ```
 
 ### Configuration
 In your project's Gruntfile, add a section named `reactTemplates` to the data object passed into `grunt.initConfig()`. The options (and defaults) are:
@@ -34,18 +37,18 @@ In your project's Gruntfile, add a section named `reactTemplates` to the data ob
 ```js
 grunt.initConfig({
   reactTemplates: {
-    src: ['**/*.rt']
+    dist: {
+      src: ['**/*.rt'] //glob patterns of files to be processed
+      options: {
+        modules: 'none',  //possible values: (amd|commonjs|es6|typescript|none)
+        format: 'stylish' //possible values: (stylish|json)
+      }
+    }
   }
 })
 ```
-
-### Options
-
-#### src
-Type: `Array`
-Default value: `['**/*.rt']`
-
-Glob pattern for files to be processed.
+---
+for more options, see the [react-templates cli docs](https://github.com/wix/react-templates/blob/gh-pages/docs/cli.md).
 
 ## License
 Copyright (c) 2014 Wix. Licensed under the MIT license.

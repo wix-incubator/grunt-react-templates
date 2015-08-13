@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/wix/grunt-react-templates",
   "dependencies": {
-    "glob": "^5.0.14",
     "react-templates": "0.1.22"
   },
   "keywords": [
