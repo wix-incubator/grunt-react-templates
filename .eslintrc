@@ -50,7 +50,7 @@
         "block-scoped-var": 0,
         "brace-style": [2, "1tbs", { "allowSingleLine": true }],
         "consistent-return": 2,
-        "consistent-this": [0, "self", "TODO: add this options, remove this value in array"],
+        "consistent-this": [0, "self"],
         "curly": [2, "all"],
         "default-case": 0,
         "func-names": 0,
