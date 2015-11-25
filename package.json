@@ -1,6 +1,6 @@
 {
   "name": "grunt-react-templates",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Grunt task for react-templates - Light weight templates for react -> write html get valid react code",
   "main": "./tasks/react-templates.js",
   "scripts": {
