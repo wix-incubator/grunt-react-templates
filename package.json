@@ -4,7 +4,7 @@
   "description": "Grunt task for react-templates - Light weight templates for react -> write html get valid react code",
   "main": "./tasks/react-templates.js",
   "scripts": {
-    "test": "echo 'ok - no tests'",
+    "test": "eslint .",
     "patch": "npm version patch -m\"update version to %s\" && git push && git push --tags",
     "minor": "npm version minor -m\"update version to %s\" && git push && git push --tags",
     "major": "npm version major -m\"update version to %s\" && git push && git push --tags"
@@ -31,5 +31,9 @@
     "react-component",
     "react component",
     "gruntplugin"
-  ]
+  ],
+  "devDependencies": {
+    "eslint": "^5.5.0",
+    "eslint-config-wix-editor": "^6.0.0"
+  }
 }
