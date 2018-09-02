@@ -9,6 +9,9 @@
     "minor": "npm version minor -m\"update version to %s\" && git push && git push --tags",
     "major": "npm version major -m\"update version to %s\" && git push && git push --tags"
   },
+  "files": [
+    "tasks"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/wix/grunt-react-templates.git"

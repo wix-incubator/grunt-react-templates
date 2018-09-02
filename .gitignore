@@ -13,6 +13,4 @@ npm-debug.log
 .idea
 *.iml
 
-### bower ###
-/bower_components/*
-
+yarn.lock
