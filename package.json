@@ -7,7 +7,9 @@
     "test": "eslint .",
     "patch": "npm version patch -m\"update version to %s\" && git push && git push --tags",
     "minor": "npm version minor -m\"update version to %s\" && git push && git push --tags",
-    "major": "npm version major -m\"update version to %s\" && git push && git push --tags"
+    "major": "npm version major -m\"update version to %s\" && git push && git push --tags",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "files": [
     "tasks"
@@ -23,7 +25,8 @@
   },
   "homepage": "https://github.com/wix/grunt-react-templates",
   "dependencies": {
-    "react-templates": "^0.6.3"
+    "react-templates": "^0.6.3",
+    "snyk": "^1.317.0"
   },
   "keywords": [
     "templates",
@@ -38,5 +41,6 @@
   "devDependencies": {
     "eslint": "^5.5.0",
     "eslint-config-wix-editor": "^6.0.0"
-  }
+  },
+  "snyk": true
 }
